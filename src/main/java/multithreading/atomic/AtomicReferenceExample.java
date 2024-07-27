@@ -1,8 +1,4 @@
-/*
- * Copyright (c) 2019-2023. Michael Pogrebinsky - Top Developer Academy
- * https://topdeveloperacademy.com
- * All rights reserved
- */
+package multithreading.atomic;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,11 +7,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.concurrent.locks.LockSupport;
 
-/**
- * Atomic References, Compare And Set, Lock-Free High Performance Data Structure
- * https://www.udemy.com/java-multithreading-concurrency-performance-optimization
- */
-public class Main {
+public class AtomicReferenceExample {
     public static void main(String[] args) throws InterruptedException {
         //StandardStack<Integer> stack = new StandardStack<>();
         LockFreeStack<Integer> stack = new LockFreeStack<>();
