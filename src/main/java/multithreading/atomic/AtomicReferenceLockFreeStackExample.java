@@ -7,9 +7,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.concurrent.locks.LockSupport;
 
-public class AtomicReferenceExample {
+public class AtomicReferenceLockFreeStackExample {
     public static void main(String[] args) throws InterruptedException {
-        //StandardStack<Integer> stack = new StandardStack<>();
         LockFreeStack<Integer> stack = new LockFreeStack<>();
         Random random = new Random();
 
@@ -91,34 +90,6 @@ public class AtomicReferenceExample {
 
         public int getCounter() {
             return counter.get();
-        }
-    }
-
-    public static class StandardStack<T> {
-        private StackNode<T> head;
-        private int counter = 0;
-
-        public synchronized void push(T value) {
-            StackNode<T> newHead = new StackNode<>(value);
-            newHead.next = head;
-            head = newHead;
-            counter++;
-        }
-
-        public synchronized T pop() {
-            if (head == null) {
-                counter++;
-                return null;
-            }
-
-            T value = head.value;
-            head = head.next;
-            counter++;
-            return value;
-        }
-
-        public int getCounter() {
-            return counter;
         }
     }
 
