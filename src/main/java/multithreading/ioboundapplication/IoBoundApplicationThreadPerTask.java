@@ -4,14 +4,18 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-public class IoBoundApplication {
+/*
+ * TODO
+     * CONCLUSION
+         * Application runtime is ~ 1000 ms, as expected
+             * Threads = 1,000
+             * Task Duration = 1,000 ms
+             * Task Count = 1,000
+         * Application crashes if NUMBER OF TASK is very large, as OS can't allocate as many threads
+ * */
 
-    // TODO - This works, as OS allows allocating 1_000 threads
+public class IoBoundApplicationThreadPerTask {
     private static final int NUMBER_OF_TASKS = 1_000;
-
-    // TODO - This throws Exception, as OS allows can allocate this many threads (limit varies from machine to machine)
-    // private static final int NUMBER_OF_TASKS = 10_000;
-
     public static void main(String[] args) throws InterruptedException {
         System.out.printf("Running %d tasks\n", NUMBER_OF_TASKS);
         long start = System.currentTimeMillis();
@@ -21,15 +25,13 @@ public class IoBoundApplication {
 
     // TODO - Note from Java 19, ExecutorService implements AutoCloseable, but not for earlier Java Versions
     private static void performTasks() throws InterruptedException {
-        // TODO - This threadpool allows as many threads as tasks
+        // TODO - This Cached Thread Pool allows as many threads as tasks
         ExecutorService executorService = Executors.newCachedThreadPool();
 
-        // TODO - This threadpool allows only fixed number of threads
-        // ExecutorService executorService = Executors.newFixedThreadPool(1_000);
-
         for (int i = 0; i < NUMBER_OF_TASKS; i++) {
-            executorService.submit(() ->  blockingIoOperation());
+            executorService.submit(()->blockingIoOperation());
         }
+
         executorService.awaitTermination(2L, TimeUnit.SECONDS);
     }
 
