@@ -19,7 +19,7 @@ public class Main1 {
         public void run() {
             //do things
             try {
-                Thread.sleep(500000);
+                Thread.sleep(500);
             } catch (InterruptedException e) {
                 System.out.println("Existing blocking thread");
             }
