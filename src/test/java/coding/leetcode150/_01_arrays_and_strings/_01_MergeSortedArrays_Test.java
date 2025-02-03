@@ -1,4 +1,4 @@
-package coding.leetcode150.arraysandstrings;
+package coding.leetcode150._01_arrays_and_strings;
 
 import org.junit.Test;
 
