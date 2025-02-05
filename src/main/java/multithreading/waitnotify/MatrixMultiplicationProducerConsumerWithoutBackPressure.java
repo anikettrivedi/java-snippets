@@ -17,9 +17,9 @@ public class MatrixMultiplicationProducerConsumerWithoutBackPressure {
         File outputFile = new File(OUTPUT_FILE);
 
         MatricesReaderProducer matricesReader = new MatricesReaderProducer(new FileReader(inputFile), threadSafeQueue);
-        MatricesMultiplierConsumer matricesConsumer = new MatricesMultiplierConsumer(new FileWriter(outputFile), threadSafeQueue);
+        MatricesMultiplierConsumer matricesWriter = new MatricesMultiplierConsumer(new FileWriter(outputFile), threadSafeQueue);
 
-        matricesConsumer.start();
+        matricesWriter.start();
         matricesReader.start();
     }
 
