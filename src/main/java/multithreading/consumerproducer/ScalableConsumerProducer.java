@@ -16,13 +16,13 @@ public class ScalableConsumerProducer {
         Queue<Object> queue = new ArrayDeque<>();
         Lock lock = new ReentrantLock();
 
-        Thread producer = new Thread(() -> {
+        Runnable producer = new Thread(() -> {
             while (true) {
                 try {
                     Object item = new Object();
                     empty.acquire();
                     lock.lock();
-                    System.out.println("Producing new item = " + item);
+                    System.out.printf("Thread = %s, Producing Item = %s%n", Thread.currentThread().getName(), item);
                     queue.offer(item);
                     lock.unlock();
                     full.release();
@@ -32,13 +32,13 @@ public class ScalableConsumerProducer {
             }
         });
 
-        Thread consumer = new Thread(() -> {
+        Runnable consumer = new Thread(() -> {
             while (true) {
                 try {
                     full.acquire();
                     lock.lock();
                     Object item = queue.poll();
-                    System.out.println("Consuming item = " + item);
+                    System.out.printf("Thread = %s, Consuming Item = %s%n", Thread.currentThread().getName(), item);
                     lock.unlock();
                     empty.release();
                 } catch (InterruptedException e) {
@@ -47,9 +47,34 @@ public class ScalableConsumerProducer {
             }
         });
 
-        producer.start();
-        consumer.start();
-        producer.join();
-        consumer.join();
+        Thread[] producers = new Thread[10];
+        for (int i = 0; i < 10; i++) {
+            Thread thread = new Thread(producer);
+            thread.setName("Producer-Thread-" + i);
+            producers[i] = thread;
+        }
+
+        Thread[] consumers = new Thread[10];
+        for (int i = 0; i < 10; i++) {
+            Thread thread = new Thread(consumer);
+            thread.setName("Consumer-Thread-" + i);
+            consumers[i] = thread;
+        }
+
+        for (Thread t : producers) {
+            t.start();
+        }
+
+        for (Thread t : consumers) {
+            t.start();
+        }
+
+        for (Thread t : producers) {
+            t.join();
+        }
+
+        for (Thread t : consumers) {
+            t.join();
+        }
     }
 }
