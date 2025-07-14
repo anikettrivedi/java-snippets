@@ -1,3 +1,5 @@
+package dsalgo;
+
 import java.util.Arrays;
 
 public class DijkstraAdjMatrix {
