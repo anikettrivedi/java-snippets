@@ -4,6 +4,7 @@ import java.util.concurrent.Semaphore;
 
 public class SingleConsumerProducer {
     public static void main(String[] args) throws InterruptedException {
+
         Semaphore full = new Semaphore(0);
         Semaphore empty = new Semaphore(1);
         Object[] object = new Object[1];
