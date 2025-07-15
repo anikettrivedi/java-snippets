@@ -16,29 +16,35 @@ import java.util.Set;
 import java.util.Stack;
 import java.util.TreeMap;
 import java.util.TreeSet;
+import java.util.concurrent.ConcurrentSkipListMap;
 
 public class JavaDataStructures {
 
-    String string = "";
+    static String string = "";
 
-    List<String> arrayList = new ArrayList<>();
-    List<String> linkedList = new LinkedList<>();
+    static List<String> arrayList = new ArrayList<>();
+    static List<String> linkedList = new LinkedList<>();
 
-    Map<String, String> map = new HashMap<>();
-    Map<String, String> treeMap = new TreeMap<>();
-    Map<String, String> linkedHashMap = new LinkedHashMap<>();
+    static Map<String, String> map = new HashMap<>();
+    static Map<String, String> treeMap = new TreeMap<>();
+    static Map<String, String> linkedHashMap = new LinkedHashMap<>();
 
-    Set<String> set = new HashSet<>();
-    Set<String> treeSet = new TreeSet<>();
-    Set<String> linkedHashSet = new LinkedHashSet<>();
+    static Set<String> set = new HashSet<>();
+    static Set<String> treeSet = new TreeSet<>();
+    static Set<String> linkedHashSet = new LinkedHashSet<>();
 
-    Stack<String> stack = new Stack<>();
+    static Stack<String> stack = new Stack<>();
 
-    Queue<String> queue = new LinkedList<>();
-    Queue<String> queue2 = new ArrayDeque<>();
+    static Queue<String> queue = new LinkedList<>();
+    static Queue<String> queue2 = new ArrayDeque<>();
 
-    PriorityQueue<String> pq = new PriorityQueue<>();
+    static PriorityQueue<String> pq = new PriorityQueue<>();
 
-    Hashtable<String, String> hashtable = new Hashtable<>();
+    static Hashtable<String, String> hashtable = new Hashtable<>();
+
+    public static void main(String[] args) {
+        System.out.println(set.add("hello"));
+        System.out.println(set.add("hello"));
+    }
 
 }
