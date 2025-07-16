@@ -89,6 +89,11 @@
 
 #### InterruptedException
 
+```
+1 - In order to handle thread interruptions, a method my explicitly catch InterruptedException and handle accordingly.
+2 - If a thread is executing a method that doesn't handle InterruptedException, then thread.interrupt() doesn't do anything.
+```
+
 <hr>
 
 ### Concurrent Collections in Java
