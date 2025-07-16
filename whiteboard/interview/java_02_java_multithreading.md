@@ -164,9 +164,9 @@
 
 ### Locks in Java
 
-1 - Fine Grained vs Coarse Grained Locking?
+1 - Synchronized vs Lock
 
-2 - Synchronized keyword?
+2 - Fine Grained vs Coarse Grained Locking
 
 3 - What is meant by a Reentrant Lock?
 
@@ -182,9 +182,9 @@
 
 ### Conditions on Locks in Java
 
-1 - Object (wait(), notify(), notifyAll())
+1 - Conditions on Object (wait(), notify(), notifyAll())
 
-2 - Conditions (await(), signal(), signalAll())
+2 - Conditions on Locks (condition.await(), condition.signal(), condition.signalAll())
 
 ### Semaphores in Java
 
