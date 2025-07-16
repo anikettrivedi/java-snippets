@@ -9,6 +9,8 @@
 
 4 - Java Byte Code vs Machine Code?
 
+5 - AOT vs JIT?
+
 ### Garbage Collectors
 1 - What is a Garbage Collector?
 
