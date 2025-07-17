@@ -34,7 +34,7 @@
 3 - JVM, JDK & JRE are all platform dependent.
 ```
 
-### JVM
+### JVM Pending questions
 1 - What is a JVM?
 
 2 - Compile Time vs Run Time?
