@@ -1,42 +1,6 @@
 ## Java JVM and Garbage Collection
 
-### JVM
-
-#### What is a Virtual Machine?
-```
-1 - A VM is a program that simulates behavior of a physical machine.
-2 - Example:
-    VMWare : System based VM
-    JVM    : Application based VM
-```
-
-#### What is a JVM?
-```
-1 - Java Code (.java files) -> compiler -> Byte Code (.class files) -> JVM -> converts byte code to machine specific code.
-2 - JVM makes Java platform independent.
-3 - JVM is available for popular OS Kernels & CPU Architectures.
-4 - JVM enables write once run anywhere.
-```
-
-#### Is JVM compiler or interpreter?
-```
-1 - JVM is an interpreter.
-```
-
-#### JRE vs JDK vs JVM
-```
-1 - JRE : Java Runtime Environment
-    1 - JRE contains JVM, set of libraries & other files.
-    
-2 - JDK : Java Development Kit
-    1 - JDK contains JRE, development & debugging tools.
-    
-3 - JVM, JDK & JRE are all platform dependent.
-```
-
-#### How JVM Works?
-```
-```
+### Classloaders
 
 #### What is a Classloader?
 ```
@@ -45,6 +9,9 @@
 ```
 
 #### What activities are performed by Classloader Subsystem?
+
+![img_2.png](assets/04.png)
+
 ```
 1 - Loading 
 
@@ -90,37 +57,25 @@
 ```
 1 - Classloader works by delegating, one classloader delegates the responsibility of loading the class to their parent, if that doen't happen, then it them by itself.
 ```
-![assets/classloader.png](assets/classloader.png)
+![img_1.png](assets/03.png)
+
+#### What is the difference between static & dynamic class loading?
+```
+Static class loading  : 
+    1 - Default process of class loading.
+    2 - Classes are statically loaded when we call them.
+    
+Dynamic class loading : 
+    1 - Dynamic loading allows programmatically invoking of the functions of a class loader at runtime.
+    2 - For example:
+        
+        Class c = ClassLoader.loadClass("Demo");
+        Class c = Class.forName("Demo");
+```
 
 #### Class.forName() vs ClassLoader.loadClass()
 ```
-
+1 - Both methods try to load classes dynamically.
+2 - By default classes get initialized using Class.forName() method.
+3 - loadClass() is an instance method and requires a particular ClassLoader to load the class. By default, classes do not get initialized in loadClass().
 ```
-
-```
-```
-
-```
-```
-
-### JVM
-1 - What is a JVM?
-
-2 - Compile Time vs Run Time?
-
-3 - How to configure JVM?
-
-4 - Java Byte Code vs Machine Code?
-
-5 - AOT vs JIT?
-
-### Garbage Collectors
-1 - What is a Garbage Collector?
-
-2 - How Garbage Collector works?
-
-3 - What are different kinds of Garbage Collectors available?
-
-4 - How JVM works and its method of Garbage Collection?
-
-5 - What happens when we call System.gc()

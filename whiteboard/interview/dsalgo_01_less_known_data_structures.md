@@ -8,7 +8,7 @@
 ```
 
 #### How SkipList Works?
-![img.png](assets/skiplist.png)
+![img.png](assets/06.png)
 
 1 - A skip list is built in layers. The bottom layer 1 is an ordinary ordered linked list. Each higher layer acts as an "express lane" for the lists below, where an element in layer i  appears in layer i + 1  with some fixed probability p (two commonly used values for p are 1/2 or 1/4. On average, each element appears in 1/(1−p) lists, and the tallest element (usually a special head element at the front of the skip list) appears in all the lists. The skip list contains log<sub>1/p</sub>n lists. 
 
