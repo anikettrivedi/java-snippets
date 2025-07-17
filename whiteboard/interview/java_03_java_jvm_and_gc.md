@@ -90,6 +90,7 @@
 ```
 1 - Classloader works by delegating, one classloader delegates the responsibility of loading the class to their parent, if that doen't happen, then it them by itself.
 ```
+![assets/classloader.png](assets/classloader.png)
 
 #### Class.forName() vs ClassLoader.loadClass()
 ```
