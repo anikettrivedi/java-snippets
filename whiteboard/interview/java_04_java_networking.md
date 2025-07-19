@@ -45,6 +45,6 @@ UDP
 
 ### Connecting client and server using sockets in Java.
 ```
-1 - Server: socketprogramming.simpleclientserverdemo.EchoServer
-2 - Client: socketprogramming.simpleclientserverdemo.EchoClient
+1 - Server: socketprogramming.EchoServer
+2 - Client: socketprogramming.EchoClient
 ```

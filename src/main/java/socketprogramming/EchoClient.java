@@ -1,4 +1,4 @@
-package socketprogramming.simpleclientserverdemo;
+package socketprogramming;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
