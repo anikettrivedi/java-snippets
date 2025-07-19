@@ -14,6 +14,7 @@ public class EchoServer {
 
         System.out.println("Waiting for client.");
         try (
+                // create server socket
                 ServerSocket ss = new ServerSocket(10000);
 
                 // blocking call, waits for the client to establish connection
