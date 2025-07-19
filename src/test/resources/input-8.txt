@@ -1,0 +1,23 @@
+Jane Doe
+-1
+10
+rock
+paper
+scissors
+papier
+papel
+couteau
+rock
+paper
+scissors
+paper
+rock
+rock
+lock
+spock
+paper
+oui
+si
+non
+nien
+no
