@@ -18,8 +18,9 @@
 
 #### Can you guarantee that invoking GC will definitely call GC?
 ```
-No. Not necessarily. 
+Yes. But there is no guarantee on how much garbage collection happens.
 ```
+![img.png](assets/43.png)
 
 #### If an object reference is set to null, will the GC immediately free the memory held by that object?
 ```
