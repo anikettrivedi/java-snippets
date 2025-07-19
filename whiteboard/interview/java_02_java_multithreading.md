@@ -35,15 +35,12 @@
 
 ```
 1 - Volatile
-    1 - Makes assignment to Long/Double atomic.
-    2 - Enables happens before semantics to avoid reording of instructions.
-    3 - Less expensive than locking (Synchronized).
-    4 - Use where locking might be overkill.
-1 - Synchronized
-    1 - Mutual Exclusion
-    2 - Vibility
-    3 - More expensive.
-    4 - Use where atomicity is needed and volatile can't provide it.
+    1 - Provides visibility but not mutual exclusion.
+    2 - Makes assignment to Long/Double atomic.
+    3 - Enables happens before semantics to avoid reording of instructions.
+1 - Synchronized (Locking)
+    1 - Provides mutual exclusion and visibility.
+    2 - More expensive.
 ```
 
 #### What are Atomic Variables in Java? How are they different from traditional locking?
