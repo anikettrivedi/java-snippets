@@ -1,7 +1,7 @@
 package codingassignments.imcassignment.utility;
 
-import imcassignment.choices.GameChoice;
-import imcassignment.choices.PlayAgainChoice;
+import codingassignments.imcassignment.choices.GameChoice;
+import codingassignments.imcassignment.choices.PlayAgainChoice;
 
 import java.io.InputStream;
 import java.util.Objects;

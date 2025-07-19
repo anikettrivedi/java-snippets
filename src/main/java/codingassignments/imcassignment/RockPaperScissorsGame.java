@@ -1,10 +1,11 @@
 package codingassignments.imcassignment;
 
-import imcassignment.choices.GameChoice;
-import imcassignment.choices.PlayAgainChoice;
-import imcassignment.states.GameState;
-import imcassignment.stats.Score;
-import imcassignment.utility.InputUtils;
+
+import codingassignments.imcassignment.choices.GameChoice;
+import codingassignments.imcassignment.choices.PlayAgainChoice;
+import codingassignments.imcassignment.states.GameState;
+import codingassignments.imcassignment.stats.Score;
+import codingassignments.imcassignment.utility.InputUtils;
 
 import java.io.InputStream;
 
