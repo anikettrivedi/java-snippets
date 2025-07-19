@@ -64,9 +64,10 @@
     1 - remove(int index) : O(n) as element need to be moved to left. Better than linked list.
     2 - remove(Object object) : note it removes first occurence of the object
 7 - Use cases
-    1 - Fewer writes and frequent reads.
+    1 - Fewer writes and frequent reads. Sequencial reads.
     2 - Index based reads.
     3 - When size of List is known beforehands.
+    4 - When lower latency is important.
 8 - Implementation details:
     1 - Implements List interface.
 ```
@@ -84,8 +85,8 @@
 6 - Deletion
     1 - remove (int index) : O(n) as index at node needs to be searched first 
 7 - Use cases
-    1 - Fewer reads and frequent writes.
-    2 - Sequencial reads.
+    1 - Need queue or deque capabilities.
+    2 - Fewer reads and frequent writes. Sequencial reads.
     3 - When size of List is not known before hands.
 8 - Implementation details:
     1 - Implements List & Deque interfaces.
