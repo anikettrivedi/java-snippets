@@ -29,7 +29,7 @@
     index = hashCode() % array_size
 4 - If array is empty at the location, object is simply inserted into it as a Node (LinkedList Node).
 5 - In case of collision, LinkedList is parsed from head and each element is compared with the object to be inserted using equals()
-6 - If equals returns true, it means a duplicate entry is being insert is attempted, in such case, no insertion happens and false is returned.
+6 - If equals returns true, it means a duplicate entry insert is attempted, in such case, no insertion happens and false is returned.
 7 - If equals returns false for each node of linkedlist, object is simply added at the end of the linkedlist and true is returned.
 ```
 
@@ -44,22 +44,24 @@
 3 - How HashMap handles collisions?
 
 ```
-1 - By adding element at the end of the linkedList.
+1 - By parsing the linked list and checking for duplicates.
+2 - If not duplicate, element is added at the end of the linked list.
 ```
 
 ### ArrayList vs LinkedList
 
 #### ArrayList
 ```
+0 - Performance wise, ArrayList beats LinkedList in Read, Insertion & Deletion operations.
 1 - Backed up by dynamic arrays, Java handles resizing internally.
 2 - Uses arrays, so data stored in contiguous memory location.
 3 - Index based access - O(1), Efficient, Random Access
-4 - Sequencial access - Efficient
+4 - Sequencial access - Efficient, as contiguous memory location
 5 - Inserts
-    1 - add(e)        : O(1) amortized, Java will internally insure capacity
-    2 - add(index, e) : O(n) as element need to be moved to right (less efficient)
+    1 - add(e)        : O(1) amortized, Java will internally insure capacity, better performance than LinkedList
+    2 - add(index, e) : O(n) as element need to be moved to right, better perfomance than LinkedList
 6 - Deletion
-    1 - remove(int index) : O(n) as element need to be moved to left. (less efficient)
+    1 - remove(int index) : O(n) as element need to be moved to left. Better than linked list.
     2 - remove(Object object) : note it removes first occurence of the object
 7 - Use cases
     1 - Fewer writes and frequent reads.
@@ -71,17 +73,18 @@
 
 #### LinkedList
 ```
+0 - Performance wise, ArrayList beats LinkedList in Read, Insertion & Deletion operations.
 1 - Backed up by doubly linked list, resizing is not required.
 2 - Data is not stored in contigous memory location.
 3 - Index based access - O(n), Inefficient
-4 - Sequencial access - Efficient
+4 - Sequencial access - Less efficient that ArrayList. Check performance.ArrayListVsLinkedList.
 5 - Inserts
     1 - add(e)        : O(1) as element is simple added at the end of the list.
     2 - add(index, e) : O(n) as node at index needs to be searched first (more efficient)
 6 - Deletion
-    1 - remove (int index) : O(n) as index at node needs to be searched first (more efficient)
+    1 - remove (int index) : O(n) as index at node needs to be searched first 
 7 - Use cases
-    1 - Fewer sequencial reads and frequent writes.
+    1 - Fewer reads and frequent writes.
     2 - Sequencial reads.
     3 - When size of List is not known before hands.
 8 - Implementation details:
