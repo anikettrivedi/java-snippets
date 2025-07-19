@@ -27,10 +27,8 @@
 #### What is the use of Volatile Keyword?
 
 ```
-1 - Volatile keyword is used in multithreaded environments to ensure visibility of changes to a variable accross different threads. 
-2 - Volatile tells compiler that the value of variable must never be cached.
-3 - Volatile keyword allows setting up happens before semantics to avoid data races. CPU executes update to volatile keyword in order of declaration and doesn't to reordering of instructions.
-4 - Volatile keyword makes assignment to Long/Double atomic. (64 bit)
+1 - Volatile keyword allows setting up happens before semantics to avoid data races. CPU executes update to volatile keyword in order of declaration and doesn't do reordering of instructions.
+2 - Volatile keyword makes assignment to Long/Double atomic. (64 bit)
 ```
 
 #### Volatile vs Synchronized

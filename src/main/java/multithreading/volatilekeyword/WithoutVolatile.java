@@ -19,7 +19,7 @@ public class WithoutVolatile {
         Thread checkerThread = new Thread(() -> {
             for (int i = 0; i < NO_OF_ITERATIONS; i++) {
                 if (counterTwo > counterOne) {
-                    System.out.println("CounterTwo > CounterOne !!");
+                    System.out.println("CounterTwo > CounterOne! Data Race Detected!");
                 }
             }
         });
