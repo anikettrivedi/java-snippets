@@ -77,7 +77,7 @@
 1 - Backed up by doubly linked list, resizing is not required.
 2 - Data is not stored in contigous memory location.
 3 - Index based access - O(n), Inefficient
-4 - Sequencial access - Less efficient that ArrayList. Check performance.ArrayListVsLinkedList.
+4 - Sequencial access - Less efficient that ArrayList. Check performance.lists.ArrayListPerformance.
 5 - Inserts
     1 - add(e)        : O(1) as element is simple added at the end of the list.
     2 - add(index, e) : O(n) as node at index needs to be searched first (more efficient)

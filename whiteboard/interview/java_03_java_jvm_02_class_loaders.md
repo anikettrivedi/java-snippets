@@ -15,8 +15,8 @@
 ```
 1 - Loading 
 
-    1 - Reads class and generate binary code, which gets stored in method area. (An area in JVM Memory, Stack, Not Shared)
-    2 - Creates an Object of type java.lang.Class, which gets stored in heap area. (Another area in JVM Memory, Shared)
+    1 - Reads class and generate binary code, which gets stored in method area. (An area in JVM Memory)
+    2 - Creates an Object of type java.lang.Class, which gets stored in heap area.
     
 2 - Linking
 
@@ -32,7 +32,7 @@
 3 - Initialization
 
     1 - Original values get assigned to static variables.
-    2 - Static blocks gets executed from parent to chile (top to bottom).
+    2 - Static blocks gets executed from parent to child (top to bottom).
 ```
 
 #### What are different class loaders used by JVM?
@@ -55,7 +55,7 @@
 
 #### How does JVM load classes?
 ```
-1 - Classloader works by delegating, one classloader delegates the responsibility of loading the class to their parent, if that doen't happen, then it them by itself.
+1 - Classloader works by delegating, one classloader delegates the responsibility of loading the class to their parent, if that doens't happen, then it loads them by itself.
 ```
 ![img_1.png](assets/03.png)
 
